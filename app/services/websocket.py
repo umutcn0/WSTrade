@@ -84,7 +84,7 @@ class BinanceWebsocket:
             # Exponential backoff for reconnection
             self.reconnect_delay = min(self.reconnect_delay * 2, 60)
             print(f"Reconnecting in {self.reconnect_delay} seconds...")
-            raise  # Re-raise the exception for the test to catch
+            raise
                 
     async def start(self):
         while True:

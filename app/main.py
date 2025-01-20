@@ -26,7 +26,6 @@ async def lifespan(app: FastAPI):
     # Startup
     start_http_server(9090)
     await db.connect_to_database()
-    print("Database connected")
     asyncio.create_task(binance_ws.start())
     print("Binance WebSocket connected")
     asyncio.create_task(collect_metrics())
@@ -35,5 +34,5 @@ async def lifespan(app: FastAPI):
     # Shutdown
     await db.close_database_connection()
 
-app = FastAPI(title="Algotrading API", lifespan=lifespan)
+app = FastAPI(title="WSTrade API", lifespan=lifespan)
 app.include_router(router) 

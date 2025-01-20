@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "trading"
+name = "WSTrade"
 version = "0.1.0"
 description = ""
 authors = ["Umut Can <n.umut1499@gmail.com>"]
