@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "trading"
+version = "0.1.0"
+description = ""
+authors = ["Umut Can <n.umut1499@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.6"
+uvicorn = "^0.34.0"
+python-binance = "^1.0.27"
+pymongo = "^4.9"
+redis = "^5.2.1"
+pandas = "^2.2.3"
+numpy = "^2.2.2"
+prometheus-client = "^0.21.1"
+pytest = "^8.3.4"
+pytest-asyncio = "^0.25.2"
+python-dotenv = "^1.0.1"
+websockets = "^14.2"
+pydantic = "^2.10.5"
+pydantic-settings = "^2.7.1"
+psutil = "^6.1.1"
+motor = "^3.6.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest-timeout = "^2.3.1"
+pytest-asyncio = "^0.25.2"
+pytest-mock = "^3.14.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+asyncio_mode = "strict"
+timeout = 30  # seconds
